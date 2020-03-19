@@ -40,7 +40,7 @@ Applies to:
 
 **Important APIs**
 
-[USB Type-C Port Controller Interface driver class extensions reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_usbref/#type-c-driver-reference)
+[USB Type-C Port Controller Interface driver class extensions reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/_usbref/#type-c-driver-reference)
 
 **UcmTcpciCx client driver template**
 
@@ -148,7 +148,7 @@ Sample reference: See `EvtDeviceD0Entry` in `Device.cpp` and `HardwareRequestQue
  
  2. Call UcmTcpciPortControllerSetHardwareRequestQueue to register the new framework queue object with UcmTpciCx. After that call succeeds, UcmTcpciCx puts framework queue objects (WDFREQUEST) in this queue when it requires action from the driver. 
 
- 3. Implement EvtIoDeviceControl callback funciton to handle these IOCTLs. 
+ 3. Implement EvtIoDeviceControl callback function to handle these IOCTLs. 
 
 |  Control Code |  Description | 
 |---            |           ---|
@@ -170,7 +170,7 @@ Sample reference: See `EvtDeviceD0Entry` in `Device.cpp` and `HardwareRequestQue
 hardware request queue. 
 
  
-## 5. Handlle alerts from the port controller hardware
+## 5. Handle alerts from the port controller hardware
 
 Sample reference: See `ProcessAndSendAlerts` in `Alert.cpp`.
 

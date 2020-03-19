@@ -1,8 +1,6 @@
 ---
-title: 
-description: 
-author: balapv
-ms.author: balapv
+title: Get a submission
+description: Retrieves data for a specific submission of a product to the hardware dashboard in the Microsoft Partner Center.
 ms.topic: article
 ms.date: 04/05/2018
 ms.localizationpriority: medium
@@ -22,7 +20,7 @@ This method has the following syntax. See the following sections for usage examp
 
 |Method|Request URI|
 |:--|:--|
-|GET|`https://manage.devcenter.microsoft.com/v1.0/my/hardware/products/{productID}/submissions/{submissionID}` |
+|GET|`https://manage.devcenter.microsoft.com/v2.0/my/hardware/products/{productID}/submissions/{submissionID}` |
 
 ### Request header
 
@@ -45,7 +43,7 @@ The following example demonstrates how to retrieve information about all submiss
 
 
 ```cpp
-GET https://manage.devcenter.microsoft.com/v1.0/my/hardware/products/13635057453741329/submissions/1152921504621441930 HTTP/1.1
+GET https://manage.devcenter.microsoft.com/v2.0/my/hardware/products/13635057453741329/submissions/1152921504621441930 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
@@ -85,12 +83,12 @@ The following example demonstrates the JSON response body returned by a successf
   },
   "links": [
     {
-      "href": "https://manage.devcenter.microsoft.com/v1.0/my/hardware/products/13635057453741329/submissions/1152921504621441930",
+      "href": "https://manage.devcenter.microsoft.com/v2.0/my/hardware/products/13635057453741329/submissions/1152921504621441930",
       "rel": "self",
       "method": "GET"
     },
     {
-      "href": "https://manage.devcenter.microsoft.com/v1.0/my/hardware/products/13635057453741329/submissions/1152921504621441930",
+      "href": "https://manage.devcenter.microsoft.com/v2.0/my/hardware/products/13635057453741329/submissions/1152921504621441930",
       "rel": "update_submission",
       "method": "PATCH"
     }

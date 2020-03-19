@@ -64,7 +64,7 @@ If this policy is set to **1**, any new automatic Internet connection is blocked
 
 Ethernet is always preferred when connected. Users can still manually connect to any network. This was previously the *Enabled* state for this policy setting in builds of Windows before Windows 10, version 1809, build 17763.404. This option was first available in Windows 8.
 
-If this policy setting is set to **2**, the behavior is similar to when it it set to **1**. However, if a cellular data connection is available, that connection will always stay connected for services that require a cellular connection. When the user is connected to a VLAN or Ethernet connection, no Internet traffic is routed over the cellular connection. This option was first available in Windows 10, version 1703.
+If this policy setting is set to **2**, the behavior is similar to when it it set to **1**. However, if a cellular data connection is available, that connection will always stay connected for services that require a cellular connection. When the user is connected to a WLAN or Ethernet connection, no Internet traffic is routed over the cellular connection. This option was first available in Windows 10, version 1703.
 
 If this policy setting is set to **3**, the behavior is similar to when it is set to **2**. However, if there is an Ethernet connection, Windows does not permit users to connect to a WLAN manually. A WLAN can only be connected (automatically or manually) when there is no Ethernet connection.
 
@@ -137,9 +137,11 @@ Even though the link speed influences routing behavior among currently connected
 
 ### <span id="Signal_strength"></span><span id="signal_strength"></span><span id="SIGNAL_STRENGTH"></span>Signal strength
 
-If Windows detects that the currently connected Wi-Fi network has very low signal strength, it may choose to connect a mobile broadband network (if permitted by policy) to avoid disrupting network connectivity. This helps to smooth the transition when a user is moving away from a wireless access point.
+For Windows 8 and Windows 8.1, if Windows detects that the currently connected Wi-Fi network has very low signal strength, it may choose to connect a mobile broadband network (if permitted by policy) to avoid disrupting network connectivity. This helps to smooth the transition when a user is moving away from a wireless access point.
 
 Windows does not disconnect a more preferred Wi-Fi network until the signal strength cannot maintain the connection. If signal strength improves, Windows may soft-disconnect the mobile broadband adapter.
+
+Windows 10 does not use the Wi-Fi signal strength.
 
 ### <span id="Preferred_network_list"></span><span id="preferred_network_list"></span><span id="PREFERRED_NETWORK_LIST"></span>Preferred network list
 

@@ -21,7 +21,7 @@ The INVALID\_PROCESS\_ATTACH\_ATTEMPT bug check has a value of 0x00000005. This 
 This bug check appears very infrequently.
 
 > [!IMPORTANT]
-> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://support.microsoft.com/help/14238/windows-10-troubleshoot-blue-screen-errors).
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
 
 
 ## INVALID\_PROCESS\_ATTACH\_ATTEMPT Parameters
@@ -63,6 +63,7 @@ This bug check appears very infrequently.
 Remarks
 -------
 
+The [**!analyze**](https://docs.microsoft.com/windows-hardware/drivers/debugger/-analyze) debug extension displays information about the bug check and can be helpful in determining the root cause.
 This bug check can occur if the driver calls the **KeAttachProcess** function and the thread is already attached to another process. It is better to use the **KeStackAttachProcess** function. If the current thread was already attached to another process, the **KeStackAttachProcess** function saves the current APC state before it attaches the current thread to the new process.
 
  
